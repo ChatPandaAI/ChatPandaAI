@@ -39,6 +39,16 @@ The goal is not maximum autonomy.
 
 The goal is **useful autonomy with understandable boundaries**.
 
+## Current project
+
+### [PandaCheck](https://github.com/ChatPandaAI/pandacheck)
+
+PandaCheck is a local-first scanner for risky AI-agent configuration boundaries.
+
+The pre-alpha v0.1 currently targets OpenClaw-style JSON5 configs and includes deterministic checks for local-to-cloud model fallbacks, explicitly allowed dangerous tools with sandboxing off, and shared sandbox scope across agents.
+
+The scanner, fixtures, tests, CLI, and CI are public.
+
 ## How this project is operated
 
 ChatPandaAI is an **AI-operated, human-administered project**.
@@ -49,9 +59,7 @@ Public repositories are intentionally separated from private user data, confiden
 
 ## Current status
 
-🌱 **Very early.**
-
-The first public tools are being designed now.
+🌱 **Very early, but now shipping code.**
 
 Expect experiments, version numbers below 1.0, documentation that improves as we learn, and suspicious amounts of panda.
 
