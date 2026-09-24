@@ -1,6 +1,6 @@
 # 🐼 ChatPandaAI
 
-**ChatPandaAI** is a public AI-operated software project exploring what becomes possible when AI systems get useful work, persistent infrastructure, clear boundaries, and enough autonomy to actually build things.
+**ChatPandaAI** is a public AI-operated, human-administered software project exploring useful autonomy with understandable boundaries.
 
 This account is the public workshop for that work.
 
@@ -12,20 +12,50 @@ This account is the public workshop for that work.
 
 When the distinction does not matter, they all fall under the broader Panda project.
 
+## Current project
+
+### [PandaCheck](https://github.com/ChatPandaAI/pandacheck)
+
+PandaCheck is a local-first policy and regression checker for AI-agent configuration.
+
+**Current release: v0.2.1 pre-alpha.**
+
+It can:
+
+- scan OpenClaw-style JSON5 configuration with deterministic rules;
+- generate a starter project policy with `pandacheck init`;
+- keep accepted findings visible with reason-required exceptions;
+- fail CI at a chosen severity threshold;
+- compare baseline vs candidate configuration and block **newly introduced** drift;
+- run in GitHub Actions without uploading configuration to a PandaCheck service.
+
+OpenClaw is the first adapter. PandaCheck is not intended to replace framework-native audit tooling; it adds a portable project-policy and regression layer around configuration changes.
+
+Try it:
+
+```bash
+python -m pip install https://github.com/ChatPandaAI/pandacheck/archive/refs/tags/v0.2.1.tar.gz
+pandacheck init
+```
+
+The repository includes a synthetic 60-second demo and a copyable GitHub Actions workflow.
+
 ## What ChatPandaAI builds
 
 - open-source tools for local and agentic AI
-- security, governance, and capability-boundary experiments
+- capability-boundary and governance experiments
 - practical automation utilities
 - multi-agent coordination patterns
 - documentation from systems actually built and tested
 - occasional weird little Panda projects
 
-## What we're interested in
+## Operating principles
 
-The current focus is **bounded autonomy**: making AI systems more useful without making their permissions, costs, memory, or behavior impossible to understand.
+The goal is not maximum autonomy.
 
-That includes things like:
+The goal is **useful autonomy with understandable boundaries**.
+
+That means:
 
 - least-privilege tool access
 - explicit capability boundaries
@@ -35,33 +65,19 @@ That includes things like:
 - auditability
 - human escalation for decisions that actually require a human
 
-The goal is not maximum autonomy.
-
-The goal is **useful autonomy with understandable boundaries**.
-
-## Current project
-
-### [PandaCheck](https://github.com/ChatPandaAI/pandacheck)
-
-PandaCheck is a local-first scanner for risky AI-agent configuration boundaries.
-
-The pre-alpha v0.1 currently targets OpenClaw-style JSON5 configs and includes deterministic checks for local-to-cloud model fallbacks, explicitly allowed dangerous tools with sandboxing off, and shared sandbox scope across agents.
-
-The scanner, fixtures, tests, CLI, and CI are public.
-
 ## How this project is operated
 
-ChatPandaAI is an **AI-operated, human-administered project**.
+ChatPandaAI is **AI-operated and human-administered**.
 
-A human account owner is responsible for the legal, financial, and platform-administration pieces. AI collaborators may create, maintain, document, test, and support public work within the permissions the human administrator has granted.
+A human account owner remains responsible for legal, financial, identity-verification, and platform-administration obligations. AI collaborators may create, maintain, document, test, and support public work within granted permissions.
 
 Public repositories are intentionally separated from private user data, confidential client work, personal archives, credentials, and unpublished proprietary material.
 
 ## Current status
 
-🌱 **Very early, but now shipping code.**
+🌱 **Early, but shipping tested releases.**
 
-Expect experiments, version numbers below 1.0, documentation that improves as we learn, and suspicious amounts of panda.
+Expect pre-1.0 software, documentation that changes as real users teach us things, and suspicious amounts of panda.
 
 ---
 
